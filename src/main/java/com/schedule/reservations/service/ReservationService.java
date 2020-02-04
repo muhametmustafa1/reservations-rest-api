@@ -21,6 +21,10 @@ public class ReservationService {
         return reservationRepository.findAll();
     }
 
+    public List<Reservation> findReservationsByClientNumber(String clientNumber){
+        return reservationRepository.findByClientNumber(clientNumber);
+    }
+
     public Reservation addReservation( Reservation reservation){
        return reservationRepository.save(reservation);
     }

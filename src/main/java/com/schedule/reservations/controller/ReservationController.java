@@ -35,4 +35,9 @@ public class ReservationController {
         reservationService.deleteById(id);
     }
 
+    @GetMapping("/reservations/{clientNumber}")
+    List<Reservation> findReservationsByClientNumber(@PathVariable String clientNumber){
+        return reservationService.findReservationsByClientNumber(clientNumber);
+    }
+
 }
